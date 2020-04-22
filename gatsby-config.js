@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `victorbrugnolo.dev`,
+    position: 'Back-end developer',
     description: `A blog about software development and other cool stuff.`,
     author: `@victorbrugnolo`,
   },
@@ -31,4 +32,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
