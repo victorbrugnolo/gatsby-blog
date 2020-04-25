@@ -30,7 +30,7 @@ const Profile = () => {
 
   return (
     <ProfileWrapper>
-      <ProfileLink>
+      <ProfileLink to="/">
         <Avatar />
         <ProfileAuthor>
           {title}
