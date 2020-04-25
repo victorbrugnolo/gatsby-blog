@@ -3,6 +3,14 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Avatar from '../Avatar';
 
+import {
+  ProfileWrapper,
+  ProfileLink,
+  ProfileAuthor,
+  ProfilePosition,
+  ProfileDescription,
+} from './styles';
+
 const Profile = () => {
   const {
     site: {
@@ -21,12 +29,16 @@ const Profile = () => {
   `);
 
   return (
-    <div className="Profile-wrapper">
-      <Avatar />
-      <h1>{title}</h1>
-      <h2>{position}</h2>
-      <p>{description}</p>
-    </div>
+    <ProfileWrapper>
+      <ProfileLink>
+        <Avatar />
+        <ProfileAuthor>
+          {title}
+          <ProfilePosition>{position}</ProfilePosition>
+        </ProfileAuthor>
+        <ProfileDescription>{description}</ProfileDescription>
+      </ProfileLink>
+    </ProfileWrapper>
   );
 };
 
