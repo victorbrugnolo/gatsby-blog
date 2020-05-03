@@ -11,6 +11,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `uploads`,
+        path: `${__dirname}/static/assets/img`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
@@ -28,7 +35,22 @@ module.exports = {
         // Calculate timeToRead in minutes using word count, sanitized html, and raw Markdown content. (default: wordCount / 265)
         timeToRead: (wordCount, html, rawMD) => wordCount / 42,
         // Plugins configs
-        plugins: [],
+        plugins: [
+          {
+            resolve: 'gatsby-remark-relative-images',
+            options: {
+              name: 'uploads',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 960,
+              linkImagesToOriginal: false,
+            },
+          },
+          'gatsby-remark-lazy-load',
+        ],
       },
     },
     `gatsby-transformer-sharp`,
