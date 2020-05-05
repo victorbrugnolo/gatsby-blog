@@ -13,7 +13,7 @@ export const SearchWrapper = styled.section`
     height: auto;
     width: 100%;
   }
-  
+
   .ais-SearchBox,
   .ais-Stats {
     padding: 0.5rem 3rem;
@@ -39,6 +39,22 @@ export const SearchWrapper = styled.section`
 
     &::placeholder {
       color: var(--texts);
+    }
+  }
+
+  body#grid & {
+    .ais-Hits-list {
+      background-color: var(--borders);
+      border-bottom: 1px solid var(--borders);
+      border-top: 1px solid var(--borders);
+      display: grid;
+      grid-area: card;
+      grid-gap: 1px;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      margin-top: 2rem;
+    }
+    .ais-Hits-item {
+      background-color: var(--background);
     }
   }
 
