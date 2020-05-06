@@ -22,12 +22,14 @@ const BlogList = props => {
         {postList.map(
           ({
             node: {
+              id,
               frontmatter: { background, category, date, description, title },
               timeToRead,
               fields: { slug },
             },
           }) => (
             <PostItem
+              key={id}
               slug={slug}
               background={background}
               category={category}
@@ -61,6 +63,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          id
           fields {
             slug
           }

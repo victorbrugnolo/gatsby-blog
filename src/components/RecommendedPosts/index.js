@@ -6,12 +6,26 @@ import { RecommendedWrapper, RecommendedLink } from './styles';
 const RecommendedPosts = ({ next, previous }) => (
   <RecommendedWrapper>
     {previous && (
-      <RecommendedLink to={previous.fields.slug} className="previous">
+      <RecommendedLink
+        cover
+        direction="left"
+        bg="#16202c"
+        duration={0.6}
+        to={previous.fields.slug}
+        className="previous"
+      >
         {previous.frontmatter.title}
       </RecommendedLink>
     )}
     {next && (
-      <RecommendedLink to={next.fields.slug} className="next">
+      <RecommendedLink
+        cover
+        direction="right"
+        bg="#16202c"
+        duration={0.6}
+        to={next.fields.slug}
+        className="next"
+      >
         {next.frontmatter.title}
       </RecommendedLink>
     )}
