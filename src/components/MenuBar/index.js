@@ -7,6 +7,8 @@ import { Bulb as Light } from 'styled-icons/boxicons-regular';
 import { Grid } from 'styled-icons/boxicons-solid';
 import { ThList as List } from '@styled-icons/typicons/ThList';
 
+import getThemeColor from '../../utils/getThemeColor';
+
 import {
   MenuBarWrapper,
   MenuBarGroup,
@@ -35,7 +37,7 @@ const MenuBar = () => {
         <MenuBarLink
           cover
           direction="right"
-          bg="#16202c"
+          bg={getThemeColor()}
           duration={0.6}
           to="/"
           title="Voltar para Home"
@@ -48,7 +50,7 @@ const MenuBar = () => {
         <MenuBarLink
           cover
           direction="right"
-          bg="#16202c"
+          bg={getThemeColor()}
           duration={0.6}
           to="/search/"
           title="Pesquisar"
