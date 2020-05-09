@@ -76,8 +76,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `victorbrugnolo.dev`,
-        short_name: `victorbrugnolo`,
+        name: `Victor Brugnolo Blog`,
+        short_name: `victorbrugnolo.dev`,
         start_url: `/`,
         background_color: `#38444d`,
         theme_color: `#38444d`,
