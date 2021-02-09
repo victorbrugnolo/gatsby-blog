@@ -2,7 +2,7 @@ backend:
   name: github
   repo: victorbrugnolo/gatsby-blog
   branch: master
-  site_domain: https://victorbrugnolo.dev
+  site_domain: victorbrugnolo.dev
 
 publish_mode: editorial_workflow
 media_folder: 'static/assets/img'
